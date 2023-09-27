@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-Black.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-ExtraBold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Heebo;
+  src: url(./assets/fonts/Heebo-Thin.ttf);
+  font-weight: 300;
+}
+
+@layer base {
+  html {
+    @apply lg:text-[14px] xl:text-[16px];
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply min-h-[46.3rem] bg-no-repeat; 
+    @apply bg-v1 lg:bg-v2;
+    @apply bg-cover bg-center flex justify-center lg:justify-end;
+  }
+
+  .service-item {
+    @apply after:block after:h-[0.1px] flex-1 after:w-[13.1rem] after:bg-current flex flex-col gap-4 justify-between lg:justify-start items-center;
+    @apply lg:after:hidden;
+    @apply lg:border-l lg:pl-4 last:border-l-0 border-blue-primary;
+  }
+
+
+  .snap-gallery {
+    @apply max-sm:snap-x max-sm:snap-mandatory max-sm:p-4 sm:py-4 max-sm:overscroll-x-contain flex sm:flex-wrap gap-4 max-sm:-mx-4 max-sm:overflow-auto;
+  }
+
+  .snap-gallery .snap-gallery-item {
+    @apply snap-center max-sm:min-w-[15rem] sm:max-w-[11.3rem] lg:max-w-[21.625rem] max-sm:text-lg sm:text-[1.375rem] font-black text-blue-secondary;
+  }
+
+  .site-layout {
+    @apply max-w-xl lg:max-w-8xl mx-auto;
+  }
+
+  .subtitle {
+    /* lg:text-[3.625rem] client wanted 58px, it looks abnormally large but if this is needed use this <-- */
+    /* changing font weight from mobile to desktop is also not a normal thing you should do but did it anyway */
+    @apply text-center lg:font-normal font-extrabold text-white bg-blue-primary rounded-md w-full mx-auto lg:w-[40.625rem] flex justify-center items-center text-[1.56rem] lg:text-[2.5rem];
+  }
+  .nav-container {
+    @apply flex text-blue-primary lg:self-end lg:pb-4;
+    @apply max-lg:py-20 max-lg:bg-white  max-lg:opacity-0 max-lg:pointer-events-none;
+    @apply max-lg:data-[menu-open=true]:pointer-events-auto max-lg:data-[menu-open=true]:opacity-100;
+    @apply max-lg:transition-all max-lg:duration-500 items-center justify-center gap-8 lg:gap-14;
+    @apply text-2xl lg:text-lg xl:text-[1.25rem] max-lg:flex-col max-lg:fixed max-lg:inset-0;
+  }
+
+  .nav-item {
+    @apply hover:underline after:bg-blue-primary after:block after:absolute last:after:hidden after:pointer-events-none;
+    @apply after:w-6 relative max-lg:after:-bottom-5 after:h-0.5 after:left-1/2 max-lg:after:-translate-x-1/2;
+    @apply lg:after:w-[0.1px] lg:after:h-6 lg:after:-left-8 lg:after:top-1/2 lg:after:-translate-y-1/2;
+  }
+
+  .project-image {
+    @apply bg-no-repeat w-full bg-contain aspect-square rounded-lg;
+  }
+
+  .text-shadow {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.66);
+  }
+
+
+
+}
+
+
+
