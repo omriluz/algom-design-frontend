@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'chevron-down': 'url("./chevron-down.svg")',
+        'chevron-down': 'url("./public/chevron-down.svg")',
         // can be used to create variation of mobile and desktop images
         'v1': 'var(--bg-v1)',
         'v2': 'var(--bg-v2)'
