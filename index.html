@@ -11,7 +11,7 @@
 <body class="font-main">
   <!-- header section -->
   <header class="px-4 lg:px-8">
-    <div class="">
+    <div>
       <div class="flex items-center justify-between">
         <div class="flex max-lg:items-center gap-5 lg:gap-14 pt-6 pb-8">
           <a href="/" class="w-24 h-12 lg:w-72 lg:h-28">
@@ -27,9 +27,17 @@
             <a href="/" class="lg:hidden absolute top-7 left-1/2 -translate-x-1/2 w-24 h-12">
               <img src="algom-logo.svg" alt="site logo">
             </a>
+            <div class="bg-white"></div>
             <a class="nav-item" href="#">אודותינו</a>
             <a class="nav-item" href="#">שירותים</a>
-            <a class="nav-item" href="#">פרוייקטים</a>
+            <div class="group relative">
+            <a class="nav-item relative before:absolute before:bg-chevron-down before:bg-no-repeat before:w-2.5 before:h-2.5 before:top-1/2 before:-translate-y-1/2 before:-left-5" href="#">פרוייקטים</a> 
+            <div class="group-hover:flex flex-col gap-1 absolute bg-white hidden w-32 pt-8 -left-[1.9rem] text-center">
+              <a class="hover:underline last:border-b-0 border-b border-blue-primary" href="#">תמ״א 38</a >
+              <a class="hover:underline last:border-b-0 border-b border-blue-primary" href="#">משרדים</a >
+              <a class="hover:underline last:border-b-0 border-b border-blue-primary" href="#">בתים פרטיים</a >
+            </div>
+          </div>
             <a class="nav-item lg:hidden" href="#">תמ"א 38</a>
             <a class="nav-item lg:hidden" href="#">וילות</a>
             <a class="nav-item lg:hidden" href="#">משרדים</a>
